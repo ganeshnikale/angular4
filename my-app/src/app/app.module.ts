@@ -26,7 +26,7 @@ import { UsersComponent } from './users/users.component';
         { path: "HOME", component: UsersComponent  },
         { path: "ABOUT", component: ProductsComponent},
         { path: "PROJECT", component: SliderComponent},
-        { path: " ", redirectTo:"HOME", pathMatch:"full"}
+        { path: " ", redirectTo:"/HOME", pathMatch:"full"}
       ]
     )
   ],

@@ -1,10 +1,19 @@
-<ul>
-  <tr *ngFor='let use of Users'>
-    <td> {{use.id}}</td>
-      <td>{{use.first_name}}</td>
-      <td>{{use.last_name}}</td>
-      <td>{{use.email}}</td>
-      <td>{{use.gender}}</td>
-      <td>{{use.ip_address}}</td>
-    </tr>
-</ul>
+<button class="btn bnt-large" (click) = 'consoleMsg();'>console msg</button>
+
+
+
+
+
+
+<table  class="table table-striped">
+    <tbody>
+      <tr *ngFor="let log of Users">
+          <td *ngIf='hideme'> {{log.id}}</td>
+          <td>{{log.first_name | uppercase }}</td>
+          <td>{{log.last_name | lowercase }}</td>
+          <td>{{log.email}}</td>
+          <td>{{log.gender}}</td>
+          <td>{{log.ip_address}}</td>
+      </tr>
+    </tbody>
+</table>
