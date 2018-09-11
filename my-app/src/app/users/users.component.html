@@ -1,19 +1,29 @@
-<button class="btn bnt-large" (click) = 'consoleMsg();'>console msg</button>
+<button class="btn bnt-large" (click)='consoleMsg();'>console msg</button>
+<input type="text" [(ngModel)]='filter' >
+<button class="btn bnt-large" (click)="PushVal(filter)"> add</button>
+
+<ul>
+    <li *ngFor="let Number of Numbers; let i = index" [attr.data-index]="i" >Mobile   {{Number.mobile_no}} 
+        <span class="badge badge-secondary"> Fax {{Number.fax}}</span>
+         <button class="badge badge-primeri" (click)="RemoveMe(i)"> X </button>
+    </li>
+</ul>
 
 
 
+<!-- <ul>
+    <li *ngFor="let NewNumber of other">Mobile   {{NewNumber.mobile_no}}</li>
+</ul> -->
 
-
-
-<table  class="table table-striped">
+<table class="table table-striped">
     <tbody>
-      <tr *ngFor="let log of Users">
-          <td *ngIf='hideme'> {{log.id}}</td>
-          <td>{{log.first_name | uppercase }}</td>
-          <td>{{log.last_name | lowercase }}</td>
-          <td>{{log.email}}</td>
-          <td>{{log.gender}}</td>
-          <td>{{log.ip_address}}</td>
-      </tr>
+        <tr *ngFor="let log of Users">
+            <td *ngIf='hideme'> {{log.id}}</td>
+            <td>{{log.first_name | uppercase }}</td>
+            <td>{{log.last_name | lowercase }}</td>
+            <td>{{log.email}}</td>
+            <td>{{log.gender}}</td>
+            <td>{{log.ip_address}}</td>
+        </tr>
     </tbody>
 </table>
