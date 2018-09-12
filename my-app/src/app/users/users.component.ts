@@ -43,7 +43,7 @@
 
 
     
-    RemoveMe(index :string): void{
+    RemoveMe(index :number): void{
       
       this.Numbers.splice(index, 1);
     };

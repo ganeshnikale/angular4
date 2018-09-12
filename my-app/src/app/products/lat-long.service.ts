@@ -15,7 +15,7 @@ export class LatLongService {
 
   getLatLong(): Observable <ILatLong[]>{
     return this.http.get<ILatLong[]>(this.LatLongUrl).pipe(
-      tap( data=> console.log('all' + JSON.stringify(data)))
+      tap( data=> ('all' + JSON.stringify(data)))
     );
   }
 }

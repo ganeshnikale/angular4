@@ -1,6 +1,58 @@
 
   <h1>{{PageTitle}}</h1>
+
   <ul>
-    <li *ngFor="let latlog of LatLongs"> {{latlog.lat}} {{latlog.long}}</li>
+    <li *ngFor="let zone of zones" (click)="ZoneName(zone.name)">{{zone.name}}</li>
   </ul>
+
+  
+
+
+
+
+
+   <!-- <div *ngFor="let item of regions">
+      <h3>{{item.zone}}</h3>
+         <div *ngFor="let latlong of item.data">
+            <h5>{{latlong.name}}</h5>
+        </div>
+    </div> -->
+
+    <div>
+      <h3>{{FilterRegion.zone}}</h3>
+         <div *ngFor="let latlong of FilterRegion.data">
+            <h5>{{latlong.name}}</h5>
+        </div>
+    </div>
+
+
+
+<!-- <div>
+    <table>
+  
+      <ng-container *ngFor="let item of dataList;let i = index">
+        <tr *ngIf="i==0">
+          <th>
+            {{getKeys(item.Employee)[0]}}
+          </th>
+          <th>
+            {{getKeys(item.Employee)[1]}}
+          </th>
+        </tr>
+        <tr>
+          <td>
+            {{item.Employee.Name.First}} {{item.Employee.Name.Last}}
+          </td>
+          <td>
+            {{getKeys(item.Employee.Address)[0]}} - {{item.Employee.Address.HouseNo}}, {{item.Employee.Address.State}}, {{item.Employee.Address.Country}}
+          </td>
+        </tr>
+      </ng-container>
+  
+    </table>
+  </div> -->
+
+  <!-- <ul>
+    <li *ngFor="let latlog of LatLongs"> {{latlog.lat}} {{latlog.long}}</li>
+  </ul> -->
 
