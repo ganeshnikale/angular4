@@ -1,3 +1,9 @@
  h1{
     color:#f00;
 }
+
+.card {
+    border: 1px solid #c5c5c5;
+    padding: 10px;
+    margin: 10px 0;
+}

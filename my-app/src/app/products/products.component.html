@@ -2,7 +2,7 @@
   <h1>{{PageTitle}}</h1>
 
   <ul>
-    <li *ngFor="let zone of zones" (click)="ZoneName(zone.name)">{{zone.name}}</li>
+    <li *ngFor="let zone of ZonesArr" (click)="getName(zone.name)">{{zone.name}}</li>
   </ul>
 
   
@@ -11,20 +11,38 @@
 
 
 
-   <!-- <div *ngFor="let item of regions">
+   <!-- <div *ngFor="let item of RegionsArr">
       <h3>{{item.zone}}</h3>
          <div *ngFor="let latlong of item.data">
             <h5>{{latlong.name}}</h5>
         </div>
     </div> -->
 
+
+
+    <!-- <div *ngFor="let item of BranchArr">
+      <h2> {{item.region}} </h2>
+      <h4 *ngFor="let name of item.data">
+        {{name.name}}
+      </h4>
+    </div> -->
+
+
+
     <div>
       <h3>{{FilterRegion.zone}}</h3>
          <div *ngFor="let latlong of FilterRegion.data">
-            <h5>{{latlong.name}}</h5>
+            <h5 (click)="getName(latlong.name)">{{latlong.name}}</h5>
         </div>
     </div>
 
+    <div>
+      <h4>{{FilterBranch.region}}</h4>
+      <div *ngFor="let name of FilterBranch.data">
+        {{name.name}}
+      </div>
+      
+    </div>
 
 
 <!-- <div>
@@ -52,7 +70,30 @@
     </table>
   </div> -->
 
-  <!-- <ul>
-    <li *ngFor="let latlog of LatLongs"> {{latlog.lat}} {{latlog.long}}</li>
+   <!-- <ul>
+    <li *ngFor=""> {{latlog.lat}} {{latlog.log}} {{latlog.city}}</li>
   </ul> -->
 
+
+  <input type="text" [(ngModel)]="queryString">
+
+
+  <div *ngFor="let latlog of (LatLongs | filtercity); let index = index">
+     
+    <div class="col-sm-3">
+        <!-- {{index % 4}} -->
+        <div class=" card" >
+      <h4> City Name : {{latlog.city}}</h4>
+      <h5 *ngIf="latlog.pincode">City Pincode : {{latlog.pincode}}</h5>
+      <h6> latitude : {{latlog.lat}}</h6>
+      <h6> latitude : {{latlog.log}}</h6>
+    </div>
+      
+    </div>
+    <div class="clearfix" *ngIf="(index + 1) % 4 == 0 "></div>
+    
+  
+      
+  
+
+  </div>

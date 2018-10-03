@@ -4,11 +4,13 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule} from '@angular/common/http';
 import { FormsModule }   from '@angular/forms';
 
+
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { SliderComponent } from './slider/slider.component';
 import { UsersComponent } from './users/users.component';
+import { FiltercityPipe } from './filtercity.pipe';
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import { UsersComponent } from './users/users.component';
     ProductsComponent,
     NavigationComponent,
     SliderComponent,
-    UsersComponent
+    UsersComponent,
+    FiltercityPipe
   ],
   imports: [
     BrowserModule,

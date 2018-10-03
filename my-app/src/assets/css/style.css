@@ -1190,4 +1190,8 @@ ul.entry-meta {
 }
 .main-content.blog-w.rap,.main-content.container.blog-wrap.single-blog {
     margin-top: 80px;
+}.card {
+    border: 1px solid #c5c5c5;
+    padding: 10px;
+    margin: 10px 0;
 }

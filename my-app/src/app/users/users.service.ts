@@ -12,6 +12,9 @@ export class UsersserviceService {
 
   private UsersUrl ='src/api/MOCK_DATA.json';
 
+
+  //private UsersUrl ='http://maps.googleapis.com/maps/api/directions/json?origin=kurla&destination=Thane&mode=driving&departure_time=now&key=AIzaSyBEtwBX__OaQFZGsbDXumTssI4ZREJpHkY';
+
   constructor( private http : HttpClient) {
     
     
